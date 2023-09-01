@@ -36,24 +36,29 @@ function mudarCorTarde () {
     page.style.background = 'rgb(223, 138, 10)';
     page.style.color = '#fff';
     contain.style.background = 'rgb(43, 32, 32)'
-    img.src = '../image/pordosol.jpg' 
+    img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FP%25C3%25B4r_do_sol&psig=AOvVaw3nL3Zp7hIV4tgMv5-1JUB2&ust=1693677702047000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDDzKD_iYEDFQAAAAAdAAAAABAE' 
     conText.textContent = "Boa Tarde 🌇"
 }
 function mudarCorMadrugada () {
     page.style.background = 'rgb(63, 25, 214)';
     page.style.color = '#fff';
     contain.style.background = 'rgb(232, 207, 118)';
-    img.src = '../image/luar.jpeg' ;
+    img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.1zoom.me%2Fpt%2Fwallpaper%2F431985%2Fz1202.5%2F&psig=AOvVaw1jh1bxZQSB4FqVovbE8RSl&ust=1693677764817000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKinrb7_iYEDFQAAAAAdAAAAABAE' ;
     conText.textContent = "Boa Madrugada 🌙"
 }
-
+function mudarCorManha () {
+    page.style.background = '#e8cf76';
+    page.style.color = '#000';
+    contain.style.background = '#fff';
+    img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.discover-azores.com%2Fpt%2Fnascer-e-por-do-sol%2F&psig=AOvVaw1Di-eKv2G8nfJ6YvzLRUqi&ust=1693677672057000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIC4l5L_iYEDFQAAAAAdAAAAABAE' ;
+    conText.textContent = "Bom Dia ☀️"
+}
 if (horas >= 18 && horas <= 23)  {
     mudarCorNoite()
-} 
-if (horas >= 1 && horas < 6){
+} else if (horas >= 1 && horas < 6){
     mudarCorMadrugada()
-}
-if (horas >= 12 && horas <= 17){
+} else if (horas >= 12 && horas <= 17){
     mudarCorTarde()
+} else {
+    mudarCorManha()
 }
-
