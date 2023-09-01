@@ -28,7 +28,7 @@ function mudarCorNoite () {
     page.style.background = 'rgb(63, 25, 214)';
     page.style.color = '#fff';
     contain.style.background = 'rgb(232, 207, 118)'
-    img.src = '../image/luar.jpeg' 
+    img.src = '../image/luar.avif' 
     conText.textContent = "Boa noite 🌙"
     conText.style.color = '#000';
 }
