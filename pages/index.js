@@ -15,8 +15,6 @@ function atualizarTempo() {
     const horas = dataAtual.getHours();
     const minutos = dataAtual.getMinutes();
     const segundos = dataAtual.getSeconds();
-    
-
     const horasFormatadas = horas < 10 ? `0${horas}` : horas;
     const minutosFormatados = minutos < 10 ? `0${minutos}` : minutos;
     const segundosFormatados = segundos < 10 ? `0${segundos}` : segundos;
@@ -72,3 +70,4 @@ if (horas >= 18 && horas < 0)  {
 } else if (horas >= 6 && horas < 12){
     mudarCorManha()
 }
+// window.location.reload()
