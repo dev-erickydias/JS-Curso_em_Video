@@ -1,6 +1,5 @@
 /* Import do Padronizador da Pagina, Normalize */
 @import url(../vendor/normalize.css);
-/*background-color: rgb(232, 207, 118);*/
 
 .page {
     background-color: #e8cf76;
@@ -13,16 +12,18 @@
     height: 500px;
     display: flex;
     flex-direction: column;
-
 }
+
 .title {
     text-align: center;
     font-size: 50px;
 }
+
 .subtitle {
     margin: 25px auto 0;
     color: black;
 }
+
 .img {
     color: rgb(0, 0, 0);
     width: 300px;
@@ -30,11 +31,46 @@
     border-radius: 50%;
     margin: 50px auto 0;
 }
+
 .contain__text {
     text-align: center;
     font-size: 22px;
 }
+
 .footer__text {
     text-align: center;
     font-size: 22px;
+}
+
+/* Regras de responsividade aqui */
+
+@media (max-width: 576px) {
+    .page {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .contain {
+        margin: 50px auto;
+        width: 300px;
+        height: 100%;
+    }
+    .title {
+        margin: 50px auto 0;
+        font-size: 30px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .img {
+        width: 200px;
+        height: 200px;
+    }
+    .contain__text{
+        font-size: 16px;
+        margin: 30px auto;
+    }
+    .footer__text {
+        font-size: 16px;
+    }
 }
