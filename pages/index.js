@@ -1,3 +1,4 @@
+// pego os elementos de interação com html
 const page = document.querySelector('.page');
 const titlePage = document.querySelector('.title');
 const contain = document.querySelector('.contain');
@@ -8,6 +9,7 @@ const textFooter = document.querySelector('.footer__text');
 const dataAtual = new Date();
 const horas = dataAtual.getHours(); 
 
+//função para atualizar a hora e para acrecentar os zeros a esqueda 
 function atualizarTempo() {
     const dataAtual = new Date();
     const horas = dataAtual.getHours();
@@ -21,44 +23,52 @@ function atualizarTempo() {
     
     subtitlePage.textContent = "As horas Atuais São " + horasFormatadas + ":" + minutosFormatados + ":" + segundosFormatados;
 }
+//chamada para atualizar o horario a cada segundo
 setInterval(atualizarTempo, 1000);
 atualizarTempo()
 
+// funções para fazer a troca de fotos no meu contain principal 
 function mudarCorNoite () {
     page.style.background = 'rgb(63, 25, 214)';
     page.style.color = '#fff';
     contain.style.background = 'rgb(232, 207, 118)'
-    img.src = 'https://img.freepik.com/fotos-premium/uma-noite-de-luar_445983-3249.jpg' 
+    img.src = 'https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_900/v1647235451/zs8yg3dqcxadq6nnkpli.jpg' 
     conText.textContent = "Boa noite 🌙"
+    conText.style.color = '#000';
     conText.style.color = '#000';
 }
 function mudarCorTarde () {
     page.style.background = 'rgb(223, 138, 10)';
     page.style.color = '#fff';
     contain.style.background = 'rgb(43, 32, 32)'
-    img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FP%25C3%25B4r_do_sol&psig=AOvVaw3nL3Zp7hIV4tgMv5-1JUB2&ust=1693677702047000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDDzKD_iYEDFQAAAAAdAAAAABAE' 
+    img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/1024px-Sunset_2007-1.jpg' 
     conText.textContent = "Boa Tarde 🌇"
+    subtitlePage.style.color = '#fff';
 }
 function mudarCorMadrugada () {
-    page.style.background = 'rgb(63, 25, 214)';
+    page.style.background = 'rgb(63, 25, 50)';
     page.style.color = '#fff';
-    contain.style.background = 'rgb(232, 207, 118)';
-    img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.1zoom.me%2Fpt%2Fwallpaper%2F431985%2Fz1202.5%2F&psig=AOvVaw1jh1bxZQSB4FqVovbE8RSl&ust=1693677764817000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKinrb7_iYEDFQAAAAAdAAAAABAE' ;
+    contain.style.background = 'rgb(232, 207, 200)';
+    img.src = 'https://www.vulco.pt/uploads/finder/conducir_niebla_luces.jpg' ;
     conText.textContent = "Boa Madrugada 🌙"
+    subtitlePage.style.color = '#000';
+    conText.style.color = '#000';
 }
 function mudarCorManha () {
     page.style.background = '#e8cf76';
     page.style.color = '#000';
     contain.style.background = '#fff';
-    img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.discover-azores.com%2Fpt%2Fnascer-e-por-do-sol%2F&psig=AOvVaw1Di-eKv2G8nfJ6YvzLRUqi&ust=1693677672057000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIC4l5L_iYEDFQAAAAAdAAAAABAE' ;
+    img.src = 'https://media.istockphoto.com/id/620951116/pt/foto/panoramic-view-of-colorful-sunrise-in-mountains.jpg?s=612x612&w=0&k=20&c=48Ykdw1ta86_cw72spBnrAzKQxR0Wabc-22XjMRnozo=' ;
     conText.textContent = "Bom Dia ☀️"
 }
-if (horas >= 18 && horas <= 23)  {
+
+//validações dos horarios para que cada função seja execultada na ordem
+if (horas >= 18 && horas < 0)  {
     mudarCorNoite()
-} else if (horas >= 1 && horas < 6){
+} else if (horas >= 0 && horas < 6){
     mudarCorMadrugada()
 } else if (horas >= 12 && horas <= 17){
     mudarCorTarde()
-} else {
+} else if (horas >= 6 && horas < 12){
     mudarCorManha()
 }
