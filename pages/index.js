@@ -27,12 +27,12 @@ atualizarTempo()
 
 // funções para fazer a troca de fotos no meu contain principal 
 function mudarCorNoite () {
-    page.style.background = 'rgb(63, 25, 214)';
-    page.style.color = '#fff';
-    contain.style.background = 'rgb(232, 207, 118)'
-    img.src = 'https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_900/v1647235451/zs8yg3dqcxadq6nnkpli.jpg' 
     conText.textContent = "Boa noite 🌙"
-    conText.style.color = '#000';
+    page.style.background = 'rgb(63, 25, 50)';
+    page.style.color = '#fff';
+    contain.style.background = 'rgb(232, 207, 200)';
+    img.src = 'https://www.vulco.pt/uploads/finder/conducir_niebla_luces.jpg' ;
+    subtitlePage.style.color = '#000';
     conText.style.color = '#000';
 }
 function mudarCorTarde () {
@@ -44,13 +44,7 @@ function mudarCorTarde () {
     subtitlePage.style.color = '#fff';
 }
 function mudarCorMadrugada () {
-    page.style.background = 'rgb(63, 25, 50)';
-    page.style.color = '#fff';
-    contain.style.background = 'rgb(232, 207, 200)';
-    img.src = 'https://www.vulco.pt/uploads/finder/conducir_niebla_luces.jpg' ;
-    conText.textContent = "Boa Madrugada 🌙"
-    subtitlePage.style.color = '#000';
-    conText.style.color = '#000';
+
 }
 function mudarCorManha () {
     page.style.background = '#e8cf76';
@@ -61,13 +55,17 @@ function mudarCorManha () {
 }
 
 //validações dos horarios para que cada função seja execultada na ordem
-if (horas >= 18 && horas < 0)  {
-    mudarCorNoite()
-} else if (horas >= 0 && horas < 6){
-    mudarCorMadrugada()
-} else if (horas >= 12 && horas <= 17){
-    mudarCorTarde()
+if (horas >= 18 || horas < 6)  {
+    mudarCorNoite();
 } else if (horas >= 6 && horas < 12){
-    mudarCorManha()
+    mudarCorManha();
+} else if (horas >= 12 && horas <= 17){
+    mudarCorTarde();
 }
-// window.location.reload()
+
+// Função para recarregar a página automaticamente
+function recarregarPagina() {
+    location.reload();
+}
+
+// Chama a função de recarregar a página após a troca de cores
