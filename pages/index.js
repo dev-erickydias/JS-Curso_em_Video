@@ -61,6 +61,8 @@ if (horas >= 18 || horas < 6)  {
     mudarCorManha();
 } else if (horas >= 12 && horas <= 17){
     mudarCorTarde();
+} else {
+    mudarCorManha()
 }
 
 // Função para recarregar a página automaticamente
