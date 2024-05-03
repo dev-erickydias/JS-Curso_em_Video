@@ -55,11 +55,11 @@ function mudarCorManha () {
 }
 
 //validações dos horarios para que cada função seja execultada na ordem
-if (horas >= 18 || horas < 6)  {
+if (horas >= 19 || horas < 6)  {
     mudarCorNoite();
 } else if (horas >= 6 && horas < 12){
     mudarCorManha();
-} else if (horas >= 12 && horas <= 17){
+} else if (horas >= 12 && horas <= 18){
     mudarCorTarde();
 } else {
     mudarCorManha()
