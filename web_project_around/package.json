@@ -1,0 +1,11 @@
+{
+  "name": "web_project_around",
+  "version": "1.0.0",
+  "description": "GitHub Pages: https://loureirz.github.io/web_project_around/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

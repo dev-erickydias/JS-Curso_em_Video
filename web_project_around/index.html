@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuri Loureiro">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>EUA Afora</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header__logo">
+        <img src="./images/logo.svg" alt="Logo Around US" class="header__logo-image">
+      </div>
+    </header>
+    <main class="main">
+      <section class="profile">
+        <img src="./images/image.jpg" alt="Foto Profile" class="profile__image">
+        <div class="profile__info">
+          <h4 class="profile__info-name">Jacques Cousteau</h4>
+          <button class="profile__info-button">
+            <img src="./images/vector.svg" alt="Button Image" class="profile__info-button-image">
+          </button>
+          <p class="profile__info-text">Explorador</p>
+
+
+        </div>
+        <button class="profile__button">
+          <img src="./images/vectoradd.svg" alt="Button Add Image" class="profile__button-add">
+        </button>
+
+        <!-- popup do perfil  -->
+        <div class="popup form">
+          <div class="overlay"></div>
+          <div class="popup__container">
+            <button class="popup__close"><img src="./images/close.svg" alt="icone de fechar"
+                class="popup__close-img"></button>
+            <h2 class="form__title">Editar Perfil</h2>
+            <form class="form__fieldset" novalidate>
+              <input type="text" class="form__input-name" placeholder="Nome" value="Jacques Cousteau" minlength="2"
+                maxlength="40" required>
+              <p class="form__input-name-error"></p>
+              <input type="text" class="form__input-job" placeholder="Sobre mim" value="Explorador" minlength="2"
+                maxlength="200" required>
+              <p class="form__input-job-error"></p>
+              <input type="submit" value="Salvar" class="form__submit">
+            </form>
+          </div>
+        </div>
+
+        <!-- popup do card -->
+        <div class="popup popup_add">
+          <div class="overlay"></div>
+          <div class="popupcard formcard">
+            <button class="popup__close"><img src="./images/close.svg" alt="icone de fechar"
+                class="overlay__close-img"></button>
+            <h2 class="formcard-title">Novo Local</h2>
+            <form class="formcard__fieldset" novalidate>
+              <input type="text" class="formcard__input-title" placeholder="Titulo" value="" minlength="2"
+                maxlength="30" required>
+              <p class="formcard__input-title-error"></p>
+              <input id="link-image" type="url" class="formcard__input-link" placeholder="Link da imagem" value=""
+                required>
+              <p class="formcard__input-link-error"></p>
+              <input type="submit" value="Criar" class="formcard__submit">
+            </form>
+          </div>
+        </div>
+
+        <!-- popup da imagem -->
+        <div class="popup popup_image">
+          <div class="overlay"></div>
+          <div class="popup__container">
+            <button class="popup__close"><img src="./images/close.svg" alt="icone de fechar"
+                class="zoom__close-img"></button>
+            <img src="#" alt="#" class="zoom__popup-image">
+            <p class="zoom__popup-text"></p>
+          </div>
+        </div>
+      </section>
+      <div class="elements">
+        <template id="template">
+          <div class="elements__card">
+            <button type="button" class="elements__delete-button">
+              <img class="elements__delete-icon" src="./images/Trash.svg" alt="delete button icon" />
+            </button>
+            <img class="elements__card-image" src="#" alt="" />
+            <div class="elements__wrapper-text-and-like-button">
+              <p class="elements__card-name"></p>
+              <button type="button" class="elements__like-button">
+                <img class="elements__like-icon" src="./images/heart.svg" alt="like button icon" />
+              </button>
+            </div>
+          </div>
+        </template>
+      </div>
+      
+    </main>
+    <footer class="footer">&copy;2024 Around The U.S.</footer>
+  </div>
+  <script type="module" src="./script/index.js"></script>
+  <script type="module" src="./script/card.js"></script>
+  <script type="module" src="./script/FormValidator.js"></script>
+  <script type="module" src="./script/utils.js"></script>
+</body>
+
+</html>

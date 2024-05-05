@@ -1,0 +1,153 @@
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.overlay-open {
+  display: none;
+}
+
+.overlay__close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: -50px;
+  left: 425px;
+}
+
+.overlay__close:hover {
+    opacity: 50%;
+    transition: 0.4s;
+}
+
+.overlay__close-img {
+    width: 30px;
+    height: 30px;
+}
+
+.popupcard {
+  width: 26.875rem;
+  height: 20.625rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.formcard-title {
+  font-family: "Inter Black";
+  font-size: 24px;
+  padding: 10px 64px 20px 36px;
+  margin: 0;
+}
+
+.formcard__input-title {
+  margin: 20px 30px 0 36px;
+  padding: 5px 3px 5px 3px;
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: 0;
+}
+
+.formcard__input-title:invalid {
+  border-bottom: 1px solid red;
+}
+
+.formcard__input-title-error {
+  color: #FF0000;
+  height: 15px;
+  font-size: 12px;
+  line-height: 14.52px;
+  padding: 0 0 0 3px;
+  margin: 5px 30px 0 36px;
+}
+
+.formcard__input-link {
+  margin: 5px 30px 0 36px;
+  padding: 5px 3px 5px 3px;
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: 0;
+}
+
+.formcard__input-link:invalid {
+  border-bottom: 1px solid red;
+}
+
+.formcard__input-link-error {
+  color: #FF0000;
+  height: 15px;
+  font-size: 12px;
+  line-height: 14.52px;
+  padding: 0 0 0 3px;
+  margin: 5px 30px 0 36px;
+}
+
+.formcard__submit {
+  width: 358px;
+  height: 46px;
+  background-color: #000;
+  color: #fff;
+  margin: 35px 36px 0px 36px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formcard__submit:disabled{
+  color: grey;
+  background-color: #fff;
+}
+
+.formcard__submit:hover {
+  opacity: 80%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .popupcard {
+    width: 17.625rem;
+    height: 20.125rem;
+  }
+
+  .overlay__close {
+    left: 280px;
+  }
+
+  .formcard-title {
+    font-size: 18px;
+    padding: 0px 22px 0 22px;
+    margin: 0;
+  }
+
+  .formcard__input-title {
+    margin: 30px 20px 0 20px;
+    width: 238px;
+  }
+
+  .formcard__input-link {
+    margin: 25px 20px 0 20px;
+    width: 238px;
+  }
+
+  .formcard__submit {
+    width: 238px;
+    height: 46px;
+    padding: 0;
+    margin: 40px 22px 25px 22px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .overlay__close {
+    left: 245px;
+  }
+}

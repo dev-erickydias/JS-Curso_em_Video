@@ -1,0 +1,10 @@
+@import url("../vendor/normalize.css");
+@import url("../fonts/InterDisplay-Regular.woff2");
+@import url("../blocks/page.css");
+@import url("../blocks/header.css");
+@import url("../blocks/profile.css");
+@import url("../blocks/footer.css");
+@import url("../blocks/popup.css");
+@import url("../blocks/popupcardadd.css");
+@import url("../blocks/elements.css");
+@import url("../blocks/zoom.css");
